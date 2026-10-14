@@ -1,0 +1,247 @@
+/* Note Editor & Markdown Preview Styles */
+.editor-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.editor-modal {
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.editor-header {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--bg-tertiary);
+  background: rgba(248, 250, 253, 0.8);
+}
+
+.editor-title-input {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 4px 0;
+}
+
+.editor-title-input::placeholder {
+  color: var(--text-subtle);
+  font-weight: 500;
+}
+
+.editor-meta-bar {
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--bg-tertiary);
+  background: rgba(255, 255, 255, 0.6);
+  flex-wrap: wrap;
+}
+
+.editor-toolbar {
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--bg-tertiary);
+  background: rgba(248, 250, 253, 0.6);
+  overflow-x: auto;
+}
+
+.toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-xs);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toolbar-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--bg-tertiary);
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--bg-tertiary);
+  margin: 0 4px;
+}
+
+.editor-body-container {
+  display: flex;
+  flex: 1;
+  min-height: 380px;
+  max-height: calc(90vh - 220px);
+  overflow: hidden;
+}
+
+.editor-textarea {
+  flex: 1;
+  padding: 24px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-main);
+  background: transparent;
+  overflow-y: auto;
+}
+
+.editor-preview-container {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.4);
+  border-left: 1px solid var(--bg-tertiary);
+}
+
+/* Markdown Preview Typography */
+.md-preview {
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+.md-preview .md-h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 16px 0 12px;
+  color: var(--text-heading);
+  border-bottom: 1px solid var(--bg-tertiary);
+  padding-bottom: 6px;
+}
+
+.md-preview .md-h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 14px 0 8px;
+  color: var(--text-heading);
+}
+
+.md-preview .md-h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 12px 0 6px;
+  color: var(--primary);
+}
+
+.md-preview .md-p {
+  margin-bottom: 12px;
+}
+
+.md-preview .md-blockquote {
+  border-left: 3px solid var(--primary);
+  padding: 6px 16px;
+  margin: 12px 0;
+  background: var(--primary-light);
+  color: var(--text-muted);
+  font-style: italic;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+}
+
+.md-preview .md-list,
+.md-preview .md-numbered-list {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.md-preview .md-list li,
+.md-preview .md-numbered-list li {
+  margin-bottom: 4px;
+}
+
+.md-preview .md-task-list {
+  list-style: none;
+  padding-left: 4px;
+  margin-bottom: 12px;
+}
+
+.md-preview .md-task-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.md-preview .md-task-item.checked span {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.md-preview .md-inline-code {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary-hover);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.md-preview .md-code-block {
+  background: #0F172A;
+  color: #F8FAFC;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  overflow-x: auto;
+  margin: 14px 0;
+}
+
+.md-preview .md-divider {
+  border: none;
+  height: 1px;
+  background: var(--bg-tertiary);
+  margin: 20px 0;
+}
+
+.md-preview .md-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.editor-footer {
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--bg-tertiary);
+  background: rgba(248, 250, 253, 0.9);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
