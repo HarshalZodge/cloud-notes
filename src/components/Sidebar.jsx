@@ -46,8 +46,8 @@ export function Sidebar() {
           <svg className="brand-logo-svg" viewBox="0 0 40 40" fill="none">
             <defs>
               <linearGradient id="sbGrad" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#38BDF8"/>
-                <stop offset="100%" stop-color="#2563EB"/>
+                <stop offset="0%" stopColor="#38BDF8"/>
+                <stop offset="100%" stopColor="#2563EB"/>
               </linearGradient>
             </defs>
             <path d="M12 30H29C32.8 30 36 26.8 36 23C36 19.3 33.1 16.3 29.5 16C28.7 10.4 24 6.2 18.2 6.2C11.8 6.2 6.6 11.2 6.2 17.5C3.3 18.5 1.2 21.3 1.2 24.6C1.2 28.1 4.1 30 7.6 30H12Z" fill="url(#sbGrad)"/>

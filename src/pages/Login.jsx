@@ -35,8 +35,8 @@ export function Login({ onOpenSetupGuide }) {
             <svg viewBox="0 0 48 48" className="login-logo-svg">
               <defs>
                 <linearGradient id="loginGrad" x1="6" y1="8" x2="42" y2="40" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#38BDF8"/>
-                  <stop offset="100%" stop-color="#2563EB"/>
+                  <stop offset="0%" stopColor="#38BDF8"/>
+                  <stop offset="100%" stopColor="#2563EB"/>
                 </linearGradient>
               </defs>
               <path d="M14 36H35C39.4183 36 43 32.4183 43 28C43 23.8291 39.7997 20.4074 35.7061 20.0402C34.7212 13.7317 29.2882 9 22.7 9C15.4206 9 9.47953 14.6186 9.02534 21.7828C5.64157 22.8465 3.2 25.9868 3.2 29.7C3.2 33.7317 6.46832 36 10.5 36H14Z" fill="url(#loginGrad)"/>
